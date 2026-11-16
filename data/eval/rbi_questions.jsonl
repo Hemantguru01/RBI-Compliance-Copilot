@@ -1,0 +1,22 @@
+// Retrieval evaluation set for the 24 RBI Directions listed in data/sources.json.
+// expected_source is a substring of the filename produced by scripts/download_rbi_documents.py
+// (or of your own filename for the same document). Only the expected *document* is asserted:
+// add expected_pages after verifying the page in the PDF yourself.
+{"question": "What are the requirements for periodic updation of KYC for high-risk customers?", "expected_source": "Know_Your_Customer"}
+{"question": "What documents are officially valid documents for customer identification?", "expected_source": "Know_Your_Customer"}
+{"question": "Within what time must a bank report a fraud and to whom?", "expected_source": "Fraud_Risk_Management"}
+{"question": "What is the role and tenure of the Internal Ombudsman?", "expected_source": "Internal_Ombudsman"}
+{"question": "Which activities must a bank not outsource?", "expected_source": "Outsourcing"}
+{"question": "What are the conditions for issuing a credit card without the customer's consent?", "expected_source": "Credit_Cards"}
+{"question": "What are the requirements for authentication of digital payment transactions?", "expected_source": "Digital_Payment_Security"}
+{"question": "What are the responsibilities of the Chief Compliance Officer?", "expected_source": "Compliance_Function"}
+{"question": "How must interest be paid on savings deposits?", "expected_source": "Interest_Rate_on_Deposits"}
+{"question": "How is an account classified as a non-performing asset?", "expected_source": "Asset_Classification"}
+{"question": "What is the procedure for classifying a borrower as a wilful defaulter?", "expected_source": "Wilful_Defaulters"}
+{"question": "What are the priority sector lending targets for domestic commercial banks?", "expected_source": "Priority_Sector"}
+{"question": "What is the maximum loan limit under the Kisan Credit Card scheme?", "expected_source": "Kisan_Credit_Card"}
+{"question": "What disclosures are required on climate-related financial risks?", "expected_source": "Climate"}
+{"question": "Within how many days must credit information be reported to credit information companies?", "expected_source": "Credit_Information_Reporting"}
+{"question": "What is the minimum retention requirement in securitisation transactions?", "expected_source": "Securitisation"}
+{"question": "What is the best recipe for chocolate cake?", "expected_source": null}
+{"question": "Who won the football world cup in 2022?", "expected_source": null}

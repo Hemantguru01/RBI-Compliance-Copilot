@@ -1,0 +1,11 @@
+{"question": "How quickly must a bank resolve a customer complaint?", "expected_source": "grievance", "expected_pages": [2]}
+{"question": "Who must an unresolved complaint be escalated to?", "expected_source": "grievance", "expected_pages": [2]}
+{"question": "What compensation is payable for delay in resolving a complaint?", "expected_source": "grievance", "expected_pages": [3]}
+{"question": "What must the Key Fact Statement contain?", "expected_source": "digital_lending", "expected_pages": [2]}
+{"question": "What is the cooling-off period for a digital loan?", "expected_source": "digital_lending", "expected_pages": [2]}
+{"question": "Where must borrower data collected by lending apps be stored?", "expected_source": "digital_lending", "expected_pages": [3]}
+{"question": "Within how many hours must a cyber security incident be reported?", "expected_source": "cyber", "expected_pages": [1]}
+{"question": "To whom does the Chief Information Security Officer report?", "expected_source": "cyber", "expected_pages": [2]}
+{"question": "What is the current repo rate?", "expected_source": null}
+{"question": "Who won the cricket world cup?", "expected_source": null}
+{"question": "What is the capital gains tax rate on equity shares?", "expected_source": null}
