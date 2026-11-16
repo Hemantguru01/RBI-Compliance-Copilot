@@ -28,6 +28,10 @@ data/raw/*.PDF
 data/raw/manifest.json
 
 # Editors / OS
-.vscode/
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/settings.json
+!.vscode/extensions.json
 .idea/
 .DS_Store

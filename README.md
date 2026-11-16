@@ -194,6 +194,17 @@ streamlit run frontend/streamlit_app.py
 
 UI: <http://localhost:8501>
 
+### Run in VS Code (one click)
+
+The repo ships `.vscode/` launch and task configurations.
+
+1. Open the project folder in VS Code and install the recommended Python extension when prompted.
+2. **Terminal → Run Task… → "1. Setup: create venv + install dependencies"**, then select the `.venv` interpreter (**Python: Select Interpreter**).
+3. Put `ANTHROPIC_API_KEY` in `.env` (optional; without it answers are verbatim extracts).
+4. **Run Task → "2. Download the 24 RBI PDFs"** (or copy PDFs into `data/raw/`), then **"3. Ingest PDFs (build index)"**.
+5. **Run and Debug (Ctrl+Shift+D) → "▶ Run RBI Compliance Copilot (Backend + Frontend)" → F5.** This starts FastAPI on :8000 and Streamlit on :8501 with breakpoints enabled. Stopping one stops both.
+6. Tests: **Run Task → "Run tests"**, or the Testing panel (pytest is pre-configured).
+
 ### Try it without RBI documents (synthetic fixtures)
 
 ```bash

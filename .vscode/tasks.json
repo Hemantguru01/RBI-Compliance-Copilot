@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Setup: create venv + install dependencies",
+      "type": "shell",
+      "linux": { "command": "python3.12 -m venv .venv && .venv/bin/pip install torch --index-url https://download.pytorch.org/whl/cpu && .venv/bin/pip install -r requirements.txt && ([ -f .env ] || cp .env.example .env)" },
+      "osx": { "command": "python3.12 -m venv .venv && .venv/bin/pip install torch && .venv/bin/pip install -r requirements.txt && ([ -f .env ] || cp .env.example .env)" },
+      "windows": { "command": "py -3.12 -m venv .venv; .venv\\Scripts\\pip install torch --index-url https://download.pytorch.org/whl/cpu; .venv\\Scripts\\pip install -r requirements.txt; if (!(Test-Path .env)) { Copy-Item .env.example .env }" },
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Download the 24 RBI PDFs",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/download_rbi_documents.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Ingest PDFs (build index)",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/ingest.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Rebuild index from scratch",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/ingest.py --rebuild",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run tests",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} -m pytest",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Evaluate retrieval on RBI question set",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} scripts/evaluate.py data/eval/rbi_questions.jsonl",
+      "problemMatcher": []
+    }
+  ]
+}
